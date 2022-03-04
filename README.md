@@ -22,7 +22,7 @@ import (
 // имя переменной = виджет(парамеры)
 var NAMEVAR = tools2D.[WIDGET](..PARAMS)
 
-// вункция обновления
+// функция обновления
 func FUNCTIONUPDATE(win draw.Window) {
 	NAMEVAR.View(win)
 }
