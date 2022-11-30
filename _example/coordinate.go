@@ -2,15 +2,15 @@ package main
 
 import (
 	"github.com/gonutz/prototype/draw"
-	"github.com/toolsgui/tools2D"
+	"github.com/yuranignatenko/proto_ui/wgt"
 )
 
-var coord1 = tools2D.NewCoordinateSurface2d(50, 50, 200, 100, draw.DarkBlue, draw.Green, draw.Red, 20, 30, 10)
-var coord2 = tools2D.NewCoordinateSurface2d(300, 50, 200, 100, draw.DarkBlue, draw.Green, draw.Red, 20, 30, 10)
-var coord3 = tools2D.NewCoordinateSurface2d(550, 50, 200, 100, draw.DarkBlue, draw.Green, draw.Red, 20, 30, 10)
-var coord4 = tools2D.NewCoordinateSurface2d(70, 200, 200, 100, draw.DarkBlue, draw.Green, draw.Red, 20, 30, 10)
-var coord5 = tools2D.NewCoordinateSurface2d(300, 200, 200, 100, draw.DarkBlue, draw.Green, draw.Red, 20, 30, 10)
-var coord6 = tools2D.NewCoordinateSurface2d(550, 200, 200, 100, draw.DarkBlue, draw.Green, draw.Red, 20, 30, 10)
+var coord1 = wgt.NewCoordinateSurface2d(50, 50, 200, 100, draw.DarkBlue, draw.Green, draw.Red, 20, 30, 10)
+var coord2 = wgt.NewCoordinateSurface2d(300, 50, 200, 100, draw.DarkBlue, draw.Green, draw.Red, 20, 30, 10)
+var coord3 = wgt.NewCoordinateSurface2d(550, 50, 200, 100, draw.DarkBlue, draw.Green, draw.Red, 20, 30, 10)
+var coord4 = wgt.NewCoordinateSurface2d(70, 200, 200, 100, draw.DarkBlue, draw.Green, draw.Red, 20, 30, 10)
+var coord5 = wgt.NewCoordinateSurface2d(300, 200, 200, 100, draw.DarkBlue, draw.Green, draw.Red, 20, 30, 10)
+var coord6 = wgt.NewCoordinateSurface2d(550, 200, 200, 100, draw.DarkBlue, draw.Green, draw.Red, 20, 30, 10)
 
 var cx = 0
 

@@ -1,4 +1,4 @@
-package tools2D
+package wgt
 
 import (
 	"github.com/gonutz/prototype/draw"

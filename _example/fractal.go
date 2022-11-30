@@ -4,10 +4,10 @@ import (
 	"strconv"
 
 	"github.com/gonutz/prototype/draw"
-	"github.com/toolsgui/tools2D"
+	"github.com/yuranignatenko/proto_ui/wgt"
 )
 
-var fract = tools2D.FractalMath{
+var fract = wgt.FractalMath{
 	X:                 0,
 	Y:                 0,
 	ArrayPointsFigure: []int{50, 50, 600, 50, 600, 50},
@@ -20,13 +20,13 @@ func fcmdbt() {
 	counter = 0
 }
 
-var btn = tools2D.NewButtonRect(
+var btn = wgt.NewButtonRect(
 	"RESET\nDRAW",
 	draw.Green, draw.DarkGray,
 	draw.Blue, draw.Red, fcmdbt,
 	250, 500, 80, 40, 1.2)
 
-var lb = tools2D.NewLabel(" ", 250, 550, draw.Green, 2.)
+var lb = wgt.NewLabel(" ", 250, 550, draw.Green, 2.)
 
 func update(win draw.Window) {
 	fract.RunFractGUI(win, "xy/2", draw.LightCyan)
@@ -37,5 +37,5 @@ func update(win draw.Window) {
 }
 
 func main() {
-	draw.RunWindow("toolsgui-tools2D-examplefractal", 1000, 650, update)
+	draw.RunWindow("toolsgui-wgt-examplefractal", 1000, 650, update)
 }

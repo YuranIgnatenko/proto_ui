@@ -2,20 +2,20 @@ package main
 
 import (
 	"github.com/gonutz/prototype/draw"
-	"github.com/toolsgui/tools2D"
+	"github.com/yuranignatenko/proto_ui/wgt"
 )
 
 var dt = []int{0, 10, 9, 2, 8, 7, 11, 15, 17}
 var data = []float64{0.3, 0.5, 0.9, 1., 4., 9., 9.9}
 var data2 = []int{1, 3, 7, 7, 9, 8, 5, 20, 4, 70, 76, 33, 35, 9, 90}
 
-var hist1 = tools2D.NewHistogramma(dt, 50, 50, 300, 100, 100, draw.White)
-var hist2 = tools2D.NewHistogramma(data2, 50, 200, 300, 100, 100, draw.Green)
+var hist1 = wgt.NewHistogramma(dt, 50, 50, 300, 100, 100, draw.White)
+var hist2 = wgt.NewHistogramma(data2, 50, 200, 300, 100, 100, draw.Green)
 
-var hist3 = tools2D.NewHistogrammaFloat(data, 400, 50, 300, 100, 100, draw.Blue)
-var hist4 = tools2D.NewHistogrammaFloat(data, 400, 200, 300, 100, 100, draw.Yellow)
+var hist3 = wgt.NewHistogrammaFloat(data, 400, 50, 300, 100, 100, draw.Blue)
+var hist4 = wgt.NewHistogrammaFloat(data, 400, 200, 300, 100, 100, draw.Yellow)
 
-var hist5 = tools2D.NewHistogramma(data2, 50, 350, 300, 100, 100, draw.Red)
+var hist5 = wgt.NewHistogramma(data2, 50, 350, 300, 100, 100, draw.Red)
 
 var c = 0
 
@@ -40,5 +40,5 @@ func update(win draw.Window) {
 }
 
 func main() {
-	draw.RunWindow("toolsgui-tools2D-example-histogramm", 1000, 600, update)
+	draw.RunWindow("toolsgui-wgt-example-histogramm", 1000, 600, update)
 }

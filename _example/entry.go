@@ -2,24 +2,24 @@ package main
 
 import (
 	"github.com/gonutz/prototype/draw"
-	"github.com/toolsgui/tools2D"
+	"github.com/yuranignatenko/prot_ui/wgt"
 )
 
-var ent1 = tools2D.NewEntryRect("Entry", 10,
+var ent1 = wgt.NewEntryRect("Entry", 10,
 	draw.White, draw.DarkGray, draw.Black,
 	draw.Black, draw.Cyan, 0, 0, 300, 50)
 
-var ent2 = tools2D.NewEntryRect("Entry", 10,
+var ent2 = wgt.NewEntryRect("Entry", 10,
 	draw.Blue, draw.DarkRed, draw.White,
 	draw.Black, draw.Yellow, 0, 60, 300, 50)
 
-var ent3 = tools2D.NewEntryRect("Entry", 10,
+var ent3 = wgt.NewEntryRect("Entry", 10,
 	draw.Brown, draw.DarkCyan, draw.Blue,
 	draw.White, draw.Red, 0, 120, 300, 50)
 
-var info1 = tools2D.NewLabel("Info label ", 0, 200, draw.Green, 1.7)
-var info2 = tools2D.NewLabel("Info label ", 0, 250, draw.Red, 1.7)
-var info3 = tools2D.NewLabel("Info label ", 0, 300, draw.Blue, 1.7)
+var info1 = wgt.NewLabel("Info label ", 0, 200, draw.Green, 1.7)
+var info2 = wgt.NewLabel("Info label ", 0, 250, draw.Red, 1.7)
+var info3 = wgt.NewLabel("Info label ", 0, 300, draw.Blue, 1.7)
 
 func update(win draw.Window) {
 	ent1.View(win)
@@ -36,5 +36,5 @@ func update(win draw.Window) {
 }
 
 func main() {
-	draw.RunWindow("toolsgui-tools2D-example-entry", 300, 400, update)
+	draw.RunWindow("toolsgui-wgt-example-entry", 300, 400, update)
 }

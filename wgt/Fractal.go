@@ -1,6 +1,7 @@
-package tools2D
+package wgt
 
 import (
+	"fmt"
 	"math/rand"
 
 	"github.com/gonutz/prototype/draw"
@@ -27,7 +28,7 @@ func (fm *FractalMath) SelectPoint(arrPoint []int) []int {
 	lenArr := len(arrPoint) / 2
 
 	newPointIndex := rand.Intn(lenArr - 0)
-	// fmt.Println("NEW INDEX FOR POINTS := ", newPointIndex)
+	fmt.Println("NEW INDEX FOR POINTS := ", newPointIndex)
 
 	newX := arrPoint[newPointIndex]
 	newY := arrPoint[newPointIndex+1]
@@ -75,10 +76,11 @@ func (fm *FractalMath) RunFract(countIter int, selectAlgoritm string) {
 		// print(arxy)
 		switch selectAlgoritm {
 		case "xy/2":
+
 			arxy = fm.NewXYdefault(arxy[0], arxy[1])
 			// print(arxy)
 		case "xy/4":
-			fm.NewXYdefault4(arxy[0], arxy[1])
+			arxy = fm.NewXYdefault4(arxy[0], arxy[1])
 		}
 
 		// fmt.Println("\n\n")
@@ -86,17 +88,19 @@ func (fm *FractalMath) RunFract(countIter int, selectAlgoritm string) {
 }
 
 func (fm *FractalMath) RunFractGUI(win draw.Window, selectAlgoritm string, color draw.Color) {
-	// fmt.Println("\nRUNNING ....\n")
+	fmt.Println(fm.ArrayPointsFigure)
 	arxy := fm.SelectPoint(fm.ArrayPointsFigure)
-	// print(arxy)
+	fmt.Printf("#%v", arxy)
 	switch selectAlgoritm {
 	case "xy/2":
 		arxy = fm.NewXYdefault(arxy[0], arxy[1])
 		fm.X, fm.Y = int(arxy[0]), int(arxy[1])
 		// win.DrawPoint(fm.X, fm.Y, draw.White)
 		fm.ArrayUsedPoint = append(fm.ArrayUsedPoint, arxy)
-		for _, val := range fm.ArrayUsedPoint {
-			win.DrawEllipse(val[0], val[1], fm.Size, fm.Size, color)
+		for i, val := range fm.ArrayUsedPoint {
+			if i%2 != 0 {
+				win.DrawEllipse(val[0], val[1], fm.Size, fm.Size, color)
+			}
 		}
 	}
 }

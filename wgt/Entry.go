@@ -1,4 +1,4 @@
-package tools2D
+package wgt
 
 import (
 	"strings"
@@ -137,7 +137,7 @@ func (b *EntryRect) View(window draw.Window) {
 					b.ArrayNewText = append(b.ArrayNewText, arNamesKeys[ind])
 				}
 			}
-			if window.WasKeyPressed(key) && arNamesKeys[ind] == "BACKSPACE" && len(b.ArrayNewText) != 0 {
+			if window.WasKeyPressed(key) && arNamesKeys[ind] == "BACKSPACE" { //&& len(b.ArrayNewText) != 0 {
 				newLne := b.ArrayNewText[0 : len(b.ArrayNewText)-1]
 				b.ArrayNewText = make([]string, 0)
 				for _, val := range newLne {
