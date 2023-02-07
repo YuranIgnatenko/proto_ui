@@ -2,7 +2,7 @@ package main
 
 import (
 	"github.com/gonutz/prototype/draw"
-	"github.com/toolsgui/tools2D"
+	tools2D "proto_ui/toolsgui/wgt"
 )
 
 var coord1 = tools2D.NewCoordinateSurface2d(50, 50, 200, 100, draw.DarkBlue, draw.Green, draw.Red, 20, 30, 10)

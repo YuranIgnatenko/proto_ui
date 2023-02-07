@@ -2,7 +2,7 @@ package main
 
 import (
 	"github.com/gonutz/prototype/draw"
-	"github.com/toolsgui/tools2D"
+	tools2D "proto_ui/toolsgui/wgt"
 )
 
 var dt = []int{0, 10, 9, 2, 8, 7, 11, 15, 17}
