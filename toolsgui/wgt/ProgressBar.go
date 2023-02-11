@@ -4,7 +4,6 @@ import (
 	"strconv"
 
 	"github.com/gonutz/prototype/draw"
-	"github.com/yuranignatenko/toolsgui"
 )
 
 type ProgressBar struct {
@@ -52,13 +51,13 @@ func (pb *ProgressBar) View(percent int, win draw.Window) {
 		win.DrawRect(pb.X, pb.Y, pb.W, pb.H, pb.Color1)
 		win.FillRect(pb.X+border, pb.Y+border, percent*percPx-border*2, pb.H-border*2, pb.Color2)
 		// win.DrawText(strconv.Itoa(percent)+" % ", centerBar+pb.X, pb.Y+int(pb.H/2), pb.Color3)
-		lb := toolsgui.NewLabel(strconv.Itoa(percent)+" % ", centerBar+pb.X, pb.Y+int(pb.H/3), pb.Color3, pb.Font_size)
+		lb := NewLabel(strconv.Itoa(percent)+" % ", centerBar+pb.X, pb.Y+int(pb.H/3), pb.Color3, pb.Font_size)
 		lb.View(win)
 	}
 	if pb.TypeBar == 4 {
 		win.FillRect(pb.X, pb.Y, percent*percPx, pb.H, pb.Color2)
 		// win.DrawText(strconv.Itoa(percent)+" % ", centerBar+pb.X, pb.Y+int(pb.H/2), pb.Color3)
-		lb := toolsgui.NewLabel(strconv.Itoa(percent)+" % ", centerBar+pb.X, pb.Y+int(pb.H/3), pb.Color3, pb.Font_size)
+		lb := NewLabel(strconv.Itoa(percent)+" % ", centerBar+pb.X, pb.Y+int(pb.H/3), pb.Color3, pb.Font_size)
 		lb.View(win)
 
 	}
