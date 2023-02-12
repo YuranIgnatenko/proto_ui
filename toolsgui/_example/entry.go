@@ -1,12 +1,9 @@
 package main
 
 import (
+	"proto_ui/toolsgui/wgt"
+
 	"github.com/gonutz/prototype/draw"
-<<<<<<<< HEAD:toolsgui/_example/entry.go
-	tools2D "proto_ui/toolsgui/wgt"
-========
-	"github.com/yuranignatenko/prot_ui/wgt"
->>>>>>>> main:_example/entry.go
 )
 
 var ent1 = wgt.NewEntryRect("Entry", 10,

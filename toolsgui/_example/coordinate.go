@@ -1,12 +1,9 @@
 package main
 
 import (
+	"proto_ui/toolsgui/wgt"
+
 	"github.com/gonutz/prototype/draw"
-<<<<<<<< HEAD:toolsgui/_example/coordinate.go
-	tools2D "proto_ui/toolsgui/wgt"
-========
-	"github.com/yuranignatenko/proto_ui/wgt"
->>>>>>>> main:_example/coordinate.go
 )
 
 var coord1 = wgt.NewCoordinateSurface2d(50, 50, 200, 100, draw.DarkBlue, draw.Green, draw.Red, 20, 30, 10)

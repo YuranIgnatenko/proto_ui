@@ -1,5 +1,6 @@
 # proto_ui
-# НАХОДИТСЯ В РАЗРАБОТКЕ !
+
+this prototype *
 
 > Demo
 
@@ -63,3 +64,29 @@ func main() {
 --> Создать точку входа (функцию Main) 
 --> Создать функцию для обновления окна и всего что в нем расположите
 ```
+
+> Screen examples
+```bash
+go run _example/demo_all.go 
+go run toolsgui/_example/label.go
+go run toolsgui/_example/button.go
+go run toolsgui/_example/entry.go
+go run toolsgui/_example/progressbar.go
+go run toolsgui/_example/coordinate.go
+go run toolsgui/_example/fractal.go
+go run toolsgui/_example/histogramm.go
+go run toolsgui/_example/image.go
+
+# OR run all demo
+
+bash toolsgui/_example/run_all.sh 
+```
+![screen](screen/ui1.png)
+![screen](screen/ui2.png)
+![screen](screen/ui3.png)
+![screen](screen/ui4.png)
+![screen](screen/ui5.png)
+![screen](screen/ui6.png)
+![screen](screen/ui7.png)
+![screen](screen/ui8.png)
+![screen](screen/ui9.png)

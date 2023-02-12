@@ -1,8 +1,9 @@
 package main
 
 import (
+	"proto_ui/toolsgui/wgt"
+
 	"github.com/gonutz/prototype/draw"
-	"github.com/yuranignatenko/proto_ui/wgt"
 )
 
 func cmd1() {

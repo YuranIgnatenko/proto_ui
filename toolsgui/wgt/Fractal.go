@@ -1,7 +1,6 @@
 package wgt
 
 import (
-	"fmt"
 	"math/rand"
 
 	"github.com/gonutz/prototype/draw"
@@ -28,19 +27,15 @@ func (fm *FractalMath) SelectPoint(arrPoint []int) []int {
 	lenArr := len(arrPoint) / 2
 
 	newPointIndex := rand.Intn(lenArr - 0)
-	fmt.Println("NEW INDEX FOR POINTS := ", newPointIndex)
 
 	newX := arrPoint[newPointIndex]
 	newY := arrPoint[newPointIndex+1]
-	// fm.X = newX
-	// fm.Y = newY
-	// fmt.Println(newX, newY)
+
 	arXY := []int{newX, newY}
 	return arXY
 }
 
 func (fm *FractalMath) Clear() {
-	// fmt.Println("1")
 	fm.X = 0
 	fm.Y = 0
 	fm.ArrayPointsFigure = []int{}
@@ -48,54 +43,39 @@ func (fm *FractalMath) Clear() {
 }
 
 func (fm *FractalMath) NewXYdefault(X int, Y int) []int {
-	// fmt.Println("DATA :: [ X = ", X, ", Y = ", Y, " ]")
-
 	newX := (X-fm.X)/2 + fm.X
 	newY := (Y-fm.Y)/2 + fm.Y
 	fm.X = int(newX)
 	fm.Y = int(newY)
-	// fmt.Println("NEW X,Y := ", fm.X, fm.Y)
 	return []int{newX, newY}
 }
 
 func (fm *FractalMath) NewXYdefault4(X int, Y int) []int {
-	// fmt.Println("DATA :: [ X = ", X, ", Y = ", Y, " ]")
-
 	newX := (X-fm.X)/4 + fm.X
 	newY := (Y-fm.Y)/4 + fm.Y
 	fm.X = int(newX)
 	fm.Y = int(newY)
-	// fmt.Println("NEW X,Y := ", fm.X, fm.Y)
 	return []int{newX, newY}
 }
 
 func (fm *FractalMath) RunFract(countIter int, selectAlgoritm string) {
-	// fmt.Println("\nRUNNING ....\n")
 	for i := 0; i < countIter; i++ {
 		arxy := fm.SelectPoint(fm.ArrayPointsFigure)
-		// print(arxy)
 		switch selectAlgoritm {
 		case "xy/2":
-
-			arxy = fm.NewXYdefault(arxy[0], arxy[1])
-			// print(arxy)
+			fm.NewXYdefault(arxy[0], arxy[1])
 		case "xy/4":
-			arxy = fm.NewXYdefault4(arxy[0], arxy[1])
+			fm.NewXYdefault4(arxy[0], arxy[1])
 		}
-
-		// fmt.Println("\n\n")
 	}
 }
 
 func (fm *FractalMath) RunFractGUI(win draw.Window, selectAlgoritm string, color draw.Color) {
-	fmt.Println(fm.ArrayPointsFigure)
 	arxy := fm.SelectPoint(fm.ArrayPointsFigure)
-	fmt.Printf("#%v", arxy)
 	switch selectAlgoritm {
 	case "xy/2":
 		arxy = fm.NewXYdefault(arxy[0], arxy[1])
 		fm.X, fm.Y = int(arxy[0]), int(arxy[1])
-		// win.DrawPoint(fm.X, fm.Y, draw.White)
 		fm.ArrayUsedPoint = append(fm.ArrayUsedPoint, arxy)
 		for i, val := range fm.ArrayUsedPoint {
 			if i%2 != 0 {

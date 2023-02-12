@@ -1,14 +1,10 @@
 package main
 
 import (
+	"proto_ui/toolsgui/wgt"
 	"strconv"
 
 	"github.com/gonutz/prototype/draw"
-<<<<<<<< HEAD:toolsgui/_example/fractal.go
-	tools2D "proto_ui/toolsgui/wgt"
-========
-	"github.com/yuranignatenko/proto_ui/wgt"
->>>>>>>> main:_example/fractal.go
 )
 
 var fract = wgt.FractalMath{

@@ -1,12 +1,9 @@
 package main
 
 import (
+	"proto_ui/toolsgui/wgt"
+
 	"github.com/gonutz/prototype/draw"
-<<<<<<<< HEAD:toolsgui/_example/histogramm.go
-	tools2D "proto_ui/toolsgui/wgt"
-========
-	"github.com/yuranignatenko/proto_ui/wgt"
->>>>>>>> main:_example/histogramm.go
 )
 
 var dt = []int{0, 10, 9, 2, 8, 7, 11, 15, 17}

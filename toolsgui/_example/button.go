@@ -2,13 +2,9 @@ package main
 
 import (
 	"fmt"
+	"proto_ui/toolsgui/wgt"
 
 	"github.com/gonutz/prototype/draw"
-<<<<<<<< HEAD:toolsgui/_example/button.go
-	tools2D "proto_ui/toolsgui/wgt"
-========
-	"github.com/yuranignatenko/proto_ui/wgt"
->>>>>>>> main:_example/button.go
 )
 
 var btn1 = wgt.NewButtonRect(
