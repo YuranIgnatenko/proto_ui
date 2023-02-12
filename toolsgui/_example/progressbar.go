@@ -1,7 +1,7 @@
 package main
 
 import (
-	tools2D "proto_ui/toolsgui/wgt"
+	tools2D "github.com/YuranIgnatenko/proto_ui/toolsgui/wgt"
 
 	"github.com/gonutz/prototype/draw"
 )

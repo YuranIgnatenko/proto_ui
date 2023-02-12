@@ -1,7 +1,7 @@
 package main
 
 import (
-	"proto_ui/toolsgui/wgt"
+	"github.com/YuranIgnatenko/proto_ui/toolsgui/wgt"
 	"strconv"
 
 	"github.com/gonutz/prototype/draw"

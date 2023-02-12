@@ -4,7 +4,7 @@ import (
 	"strconv"
 
 	"github.com/gonutz/prototype/draw"
-	tools2D "proto_ui/toolsgui/wgt"
+	tools2D "github.com/YuranIgnatenko/proto_ui/toolsgui/wgt"
 )
 
 var ci = 0

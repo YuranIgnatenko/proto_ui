@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/gonutz/prototype/draw"
-	tools2D "proto_ui/toolsgui/wgt"
+	"github.com/YuranIgnatenko/github.com/gonutz/prototype/draw"
+	tools2D "github.com/YuranIgnatenko/proto_ui/toolsgui/wgt"
 )
 
 var im1 = tools2D.NewImage("src/im1.png", 0, 0, 700, 300, 0)

@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"proto_ui/toolsgui/wgt"
+	"github.com/YuranIgnatenko/proto_ui/toolsgui/wgt"
 
 	"github.com/gonutz/prototype/draw"
 )
